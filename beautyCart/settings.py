@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['djangobeautycartapp.herokuapp.com']
 
 INSTALLED_APPS = [
     'users.apps.UsersConfig',
-    'crispy_forms',
     'shop.apps.ShopConfig',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
@@ -127,6 +126,6 @@ STATIC_URL = '/static/'
 # Managin media
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 MEDIA_URL='/media/'
-CRISPY_TEMPLATE_PACK='bootstrap4'
+# CRISPY_TEMPLATE_PACK='bootstrap4'
 
 LOGIN_REDIRECT_URL='/shop'
