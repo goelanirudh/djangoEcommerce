@@ -4,7 +4,7 @@ if (localStorage.getItem('cart') == null) {
 else {
     cart = JSON.parse(localStorage.getItem('cart'))
 }
-console.log(cart)
+// console.log(cart)
 var sum=0;
 var totalPrice=0;
 if($.isEmptyObject(cart)){

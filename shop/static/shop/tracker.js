@@ -16,10 +16,10 @@ $('#trackerForm').submit(function(event){
         encode:true,
     })
     .done(function(data){
-        console.log(data);
+        // console.log(data);
         data=JSON.parse(data)
         updates=data[0];
-        console.log(updates);
+        // console.log(updates);
         if(updates.length>0 & updates!={}){
 
         for(i=0;i<updates.length;i++){
@@ -40,7 +40,7 @@ $('#trackerForm').submit(function(event){
     }
 // fill in the order details
 cart=JSON.parse(data[1])
-console.log(cart)
+// console.log(cart)
         for (var item in cart) {
             let name = cart[item][1]
             let qty = cart[item][0]

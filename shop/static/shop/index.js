@@ -57,16 +57,16 @@ updatePopover(cart)
 
 //Addto cart popover
 function updatePopover() {
-    console.log('we are inside popover')
+    // console.log('we are inside popover')
     popStr = ""
     popStr = popStr + "<h5>Your item in Shopping cart</h5><div class= mx-2 my-2>"
     var i = 1;
     for (var item in cart) {
         popStr = popStr + "<b>" + i + "</b>. "
         popStr = popStr + document.getElementById('name' + item).innerHTML + "   Qty " + cart[item][0] + "</br>"
-        console.log(item)
+        // console.log(item)
 
-        console.log(cart[item][0])
+        // console.log(cart[item][0])
         i++
     }
     //TODO: Check BUtton tag not working
