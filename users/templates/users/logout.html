@@ -1,0 +1,17 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Logout{% endblock %}
+
+{% block body %}
+<div class="container my-4  ">
+    <h2>You have been Logged Out</h2>
+
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <p style="font-size: large;">Want To Shop Again?</p> <a class="ml-2" href="/login">
+            <button class="btn btn-danger">Log In</button>
+            </a>
+        </small>
+    </div>
+</div>
+{% endblock%}

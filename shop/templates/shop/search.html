@@ -1,0 +1,65 @@
+{% extends 'shop/base.html' %}
+{% block title %}Search{% endblock %}
+{% block body %}
+<!-- slide show starts here -->
+<div class="container">
+
+    {% for products, range, nSlide in allProducts %}
+    <h5 class="my-4">{{products.0.category}}</h5>
+    <div class="row">
+        <div id="demo{{forloop.counter}}" class="col border carousel slide my-3" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo{{forloop.counter}}" data-slide-to="0"></li>
+
+                {% for itemCount in range %}
+                <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to={{itemCount}}></li>
+                {% endfor %}
+            </ul>
+
+            <div class="container carousel-inner no-padding">
+                <div class="carousel-item active">
+                    {% for product in products %}
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card align-items-center">
+                            <a href="/shop/product/{{product.id}}">
+                                <img src="/media/{{product.image}}" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body">
+                                <a href="/shop/product/{{product.id}}">
+                                    <h5 class="card-title" id="namepr{{product.id}}">{{product.product_name}}</h5>
+                                </a>
+                                <p class="card-text">{{product.product_description|slice:"0:40"}}...</p>
+                                <a href="/shop/product/{{product.id}}">
+                                    <h6 class="card-title">Rs.<span id="pricepr{{product.id}}">{{product.price}}</span>
+                                    </h6>
+                                </a>
+                                <span id="divpr{{product.id}}" class="divpr">
+                                    <button id="pr{{product.id}}" class="btn btn-primary my-3 cart">Add To Cart</button>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                </div>
+                <div class="carousel-item">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- slide show ends here -->
+
+        <!-- left and right controller of carousel -->
+
+        <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

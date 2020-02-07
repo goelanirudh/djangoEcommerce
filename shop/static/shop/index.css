@@ -1,0 +1,43 @@
+.col-md-3{
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.col-md-3 img {
+    max-width: 157px;
+    max-height: 187px;
+}
+
+.card{
+    min-width: 240px;
+    min-height: 380px;
+}
+
+
+body .carousel-indicator li{
+    background-color: crimson;
+}
+
+
+.carousel-indicators .active{
+    background-color: crimson;
+}
+
+
+body .carousel-container-prev-icon{
+    background-color: crimson;
+}
+body .carousel-container-next-icon{
+    background-color: crimson;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    top: auto;
+    bottom: auto;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+    background-color: crimson;
+}
