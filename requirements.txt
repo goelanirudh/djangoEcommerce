@@ -1,6 +1,6 @@
 Jinja2==2.10.3
 json5==0.8.5
-Django==2.2.10
+Django==2.2.24
 mpmath==1.1.0
 django-crispy-forms==1.7.2
 django-heroku==0.3.1
